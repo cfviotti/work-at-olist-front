@@ -59,4 +59,8 @@ main {
 
   height: 100%;
   padding: 1rem;
+
+  @include bp-smallup {
+    padding: 5.375rem 1rem;
+  }
 }
