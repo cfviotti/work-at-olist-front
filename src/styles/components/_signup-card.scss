@@ -32,12 +32,38 @@
 }
 
 .signup-card > .success {
+  display: flex;
   visibility: hidden;
   overflow: hidden;
+  align-items: center;
+  flex-direction: column;
 
   height: 0;
 
   opacity: 0;
+}
+
+.signup-card > .success.-show {
+  visibility: visible;
+  overflow: auto;
+
+  height: auto;
+  margin-top: 4.25rem;
+  margin-bottom: 3.5rem;
+
+  opacity: 1;
+}
+
+.signup-card > .success > * + * {
+  margin-top: 1rem;
+}
+
+.signup-card > .success > p {
+  line-height: 1.6;
+
+  max-width: 25ch;
+
+  text-align: center;
 }
 
 .signup-card > form > .app-button {
