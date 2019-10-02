@@ -1,3 +1,17 @@
 // Set colors variables
 
-$color-brand: #0c29d0;
+// Color names
+$basecolor-olist-blue: #0C29D0;
+$basecolor-navy-white: #F5F5FB;
+$basecolor-seal-gray: #EAEAF4;
+$basecolor-gravy-gray: #B6B9D0;
+$basecolor-steel-gray: #696D8C;
+$basecolor-lavish-green: #17D499;
+
+// Context based colors
+$color-brand: $basecolor-olist-blue;
+$color-background: $basecolor-navy-white;
+$color-positive: $basecolor-lavish-green;
+$color-input-border: $basecolor-gravy-gray;
+$color-text: $basecolor-steel-gray;
+$color-neutral: $basecolor-seal-gray;
