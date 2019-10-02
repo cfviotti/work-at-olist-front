@@ -6,6 +6,7 @@
   max-width: 32rem;
   padding: 2rem 1.5rem;
 
+  border: 3px solid $color-card-border;
   background: #FFF;
 
   @include bp-smallup {
