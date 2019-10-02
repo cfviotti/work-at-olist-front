@@ -1,7 +1,11 @@
 // Import our styles
 
-// Simple styles for testing our Hello World
-body {
-	background-color: #0c29d0;
-  color: #fff;
-}
+// Ambience
+@import 'ambience/colors';
+@import 'ambience/fonts';
+@import 'ambience/typography';
+
+// Base
+@import 'base/responsive';
+@import 'base/typography';
+@import 'base/unclassed';
