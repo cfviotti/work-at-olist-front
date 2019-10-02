@@ -1,0 +1,43 @@
+.signup-card {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  max-width: 32rem;
+  padding: 2.5rem 1.5rem;
+
+  background: #FFF;
+}
+
+.signup-card > form > h1 {
+  font-size: 1.375rem;
+  font-weight: 500;
+
+  margin-bottom: 2rem;
+
+  text-align: center;
+}
+
+
+.signup-card > svg {
+  align-self: center;
+
+  margin-bottom: 1.5rem;
+}
+
+.signup-card > .success {
+  visibility: hidden;
+  overflow: hidden;
+
+  height: 0;
+
+  opacity: 0;
+}
+
+.signup-card > form > .app-button {
+  width: 100%;
+  margin-top: 2rem;
+
+  color: #FFF;
+  background-color: $color-positive;
+}
