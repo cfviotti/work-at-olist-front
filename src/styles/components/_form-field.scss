@@ -1,0 +1,22 @@
+.form-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-field > label {
+  margin-bottom: .25rem;
+
+  text-indent: 1px;
+
+  color: $color-text;
+}
+
+.form-field > input {
+  height: 2.75rem;
+
+  border: 1px solid $color-input-border;
+}
+
+.form-field + .form-field {
+  margin-top: 1.5rem;
+}
