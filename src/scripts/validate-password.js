@@ -1,4 +1,5 @@
 passwordInputElement = document.querySelector('.js-passwordInput')
+confirmPasswordElement = document.querySelector('.js-confirmPassword')
 
 passwordScoreElements = document.querySelectorAll('.js-passwordScore')
 
@@ -10,6 +11,11 @@ minNumValidationElement = document.querySelector('.js-minNumValidation')
 passwordInputElement.addEventListener('input', function() {
   isValidPassword(this.value)
 })
+
+confirmPasswordElement.addEventListener('input', function() {
+  passwordConfirmation(this.value)
+})
+
 
 
 let isValidPassword = (passwordInputValue) => {
@@ -104,6 +110,17 @@ let hasNumber = (passwordInputValue) => {
   } else {
     minNumValidationElement.classList.remove('-pass')
     minNumValidationElement.classList.add('-fail')
+    return false
+  }
+}
+
+let passwordConfirmation = (passwordInputValue) => {
+  if(passwordInputElement.value === confirmPasswordElement.value) {
+    confirmPasswordElement.classList.add('-valid')
+    return true
+    
+  } else {
+    confirmPasswordElement.classList.remove('-valid')
     return false
   }
 }
