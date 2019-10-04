@@ -1,0 +1,43 @@
+.loading-dots,
+.loading-dots:before,
+.loading-dots:after {
+  width: .5rem;
+  height: .5rem;
+
+  animation: loading 1.4s infinite ease-in-out;
+
+  border-radius: 50%;
+
+  animation-fill-mode: both;
+}
+.loading-dots {
+  display: none;
+  position: absolute;
+  top: -1.1rem;
+
+  animation-delay: -.16s;
+
+  color: #FFF;
+
+  &::before,
+  &::after {
+    position: absolute;
+    top: 0;
+
+    content: '';
+  }
+
+  &::before {
+    left: -1rem;
+
+    animation-delay: -.32s;
+  }
+
+  &::after {
+    left: 1rem;
+  }
+
+  &.-show {
+    display: block;
+  }
+}

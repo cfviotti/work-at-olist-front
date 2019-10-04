@@ -1,0 +1,10 @@
+@keyframes loading {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 2.5rem 0 -0.5rem;
+  }
+  40% {
+    box-shadow: 0 2.5rem 0 0;
+  }
+}
