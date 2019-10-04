@@ -116,11 +116,11 @@ let hasNumber = (passwordInputValue) => {
 
 let passwordConfirmation = (passwordInputValue) => {
   if(passwordInputElement.value === confirmPasswordElement.value) {
-    confirmPasswordElement.classList.add('-valid')
+    confirmPasswordElement.classList.remove('-invalid')
     return true
     
   } else {
-    confirmPasswordElement.classList.remove('-valid')
+    confirmPasswordElement.classList.add('-invalid')
     return false
   }
 }

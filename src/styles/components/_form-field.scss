@@ -24,8 +24,18 @@
     border: 1px solid $color-negative;
   }
 }
-.form-field > input.-valid {
+
+.form-field > input:valid {
   border: 1px solid $color-positive;
+}
+
+.form-field > input:invalid,
+.form-field > input.-invalid {
+  border: 1px solid $color-negative;
+}
+
+.form-field > input.-empty {
+  border: 1px solid $color-input-border;
 }
 
 .form-field + .form-field {
