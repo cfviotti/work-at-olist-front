@@ -37,33 +37,33 @@
         
         <div class="form-field">
           <label for="Name">Nome completo</label>
-          <input type="text" id="Name" name="name">
+          <input type="text" id="Name" name="name" required>
         </div>
         
         <div class="form-field">
           <label for="Email">E-mail</label>
-          <input type="email" id="Email" name="email">
+          <input type="email" id="Email" name="email" required>
         </div>
         
         <div class="form-field">
           <label for="Password">Senha</label>
-          <input type="password" id="Password" name="password">
+          <input class="js-passwordInput" type="password" id="Password" name="password" required pattern="^(?=.*[A-Z])(?=.*\d).{6,}$">
 
           <div class="password-progress">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
+            <div class="bar js-passwordScore js-low"></div>
+            <div class="bar js-passwordScore js-medium"></div>
+            <div class="bar js-passwordScore js-high"></div>
             <ul>
-              <li>Pelo menos 6 caracteres</li>
-              <li>Pelo menos 1 letra maiúscula</li>
-              <li>Pelo menos 1 número</li>
+              <li class="js-minCharsValidation">Pelo menos 6 caracteres</li>
+              <li class="js-minCapsValidation">Pelo menos 1 letra maiúscula</li>
+              <li class="js-minNumValidation">Pelo menos 1 número</li>
             </ul>
           </div>
         </div>
         
         <div class="form-field">
           <label for="Confirm">Confirme sua senha</label>
-          <input type="password" id="Confirm" name="confirm">
+          <input type="password" id="Confirm" name="confirm" required>
         </div>
         
         <button class="app-button -signup">
