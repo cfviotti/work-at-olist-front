@@ -1,4 +1,4 @@
-inputElements = document.querySelectorAll('input')
+const inputElements = document.querySelectorAll('input')
 
 // Start form with empty styles
 inputElements.forEach(el => el.classList.add('-empty'))

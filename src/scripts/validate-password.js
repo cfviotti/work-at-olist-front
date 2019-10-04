@@ -1,11 +1,11 @@
-passwordInputElement = document.querySelector('.js-passwordInput')
-confirmPasswordElement = document.querySelector('.js-confirmPassword')
+const passwordInputElement = document.querySelector('.js-passwordInput')
+const confirmPasswordElement = document.querySelector('.js-confirmPassword')
 
-passwordScoreElements = document.querySelectorAll('.js-passwordScore')
+const passwordScoreElements = document.querySelectorAll('.js-passwordScore')
 
-minCharsValidationElement = document.querySelector('.js-minCharsValidation')
-minCapsValidationElement = document.querySelector('.js-minCapsValidation')
-minNumValidationElement = document.querySelector('.js-minNumValidation')
+const minCharsValidationElement = document.querySelector('.js-minCharsValidation')
+const minCapsValidationElement = document.querySelector('.js-minCapsValidation')
+const minNumValidationElement = document.querySelector('.js-minNumValidation')
 
 
 passwordInputElement.addEventListener('input', function() {
