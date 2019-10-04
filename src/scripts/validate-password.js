@@ -113,12 +113,9 @@ let hasNumber = (passwordInputValue) => {
 }
 
 let passwordConfirmation = (passwordInputValue) => {
-  if(passwordInputElement.value === confirmPasswordElement.value) {
-    confirmPasswordElement.classList.remove('-invalid')
-    return true
-    
+  if(passwordInputElement.value == confirmPasswordElement.value && isPasswordStrong(passwordInputValue) === 3) {
+    confirmPasswordElement.setCustomValidity('');
   } else {
-    confirmPasswordElement.classList.add('-invalid')
-    return false
+    confirmPasswordElement.setCustomValidity('As senhas não coincidem');
   }
 }
