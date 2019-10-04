@@ -1,11 +1,20 @@
 .app-button {
-  display: flex;
-  justify-content: center;
   font-weight: 700;
 
   position: relative;
 
+  display: flex;
+  justify-content: center;
+
   padding: 1rem 2rem;
 
   cursor: pointer;
+  transition: color .2s linear;
+
+  color: #FFF;
+  background-color: $color-positive;
+
+  &.-hidelabel {
+    color: transparent;
+  }
 }
