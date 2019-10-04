@@ -9,16 +9,15 @@ minNumValidationElement = document.querySelector('.js-minNumValidation')
 
 
 passwordInputElement.addEventListener('input', function() {
-  isValidPassword(this.value)
+  passwordProgress(isPasswordStrong(this.value))
+  passwordConfirmation(this.value)
 })
 
 confirmPasswordElement.addEventListener('input', function() {
   passwordConfirmation(this.value)
 })
 
-
-
-let isValidPassword = (passwordInputValue) => {
+let isPasswordStrong = (passwordInputValue) => {
   let score = 0
   let passwordRequirements = {
     minCharsValidation: hasMinimumCharacters(passwordInputValue),
@@ -35,10 +34,13 @@ let isValidPassword = (passwordInputValue) => {
     passwordInputElement.classList.remove('-valid')
   }
 
+  return score
+}
+
+let passwordProgress = (score) => {
   switch (score) {
     case 0:
       passwordScoreElements.forEach(el => el.classList.remove('-mediumscore', '-highscore', '-lowscore'))
-      return false
       break
 
     case 1:
@@ -48,7 +50,6 @@ let isValidPassword = (passwordInputValue) => {
           el.classList.add('-lowscore')
         }
       })
-      return false
       break
 
     case 2:
@@ -58,7 +59,6 @@ let isValidPassword = (passwordInputValue) => {
           el.classList.add('-mediumscore')
         }
       })
-      return false
       break
 
     case 3:
@@ -66,8 +66,6 @@ let isValidPassword = (passwordInputValue) => {
         el.classList.remove('-lowscore', '-mediumscore')
         el.classList.add('-highscore')
       })
-
-      return true
       break
   }
 }
