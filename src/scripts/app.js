@@ -7,4 +7,4 @@ import '../index.html';
 import '../styles/app.scss';
 
 // Importing our scripts
-// New JS goes here...
+import './validate-password.js';

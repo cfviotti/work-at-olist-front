@@ -25,9 +25,7 @@
   }
 }
 .form-field > input.-valid {
-  &:focus {
-    border: 1px solid $color-positive;
-  }
+  border: 1px solid $color-positive;
 }
 
 .form-field + .form-field {
