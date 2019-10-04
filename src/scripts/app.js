@@ -8,3 +8,4 @@ import '../styles/app.scss';
 
 // Importing our scripts
 import './validate-password.js';
+import './validate-full-name.js';
