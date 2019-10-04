@@ -1,5 +1,9 @@
 .app-button {
+  display: flex;
+  justify-content: center;
   font-weight: 700;
+
+  position: relative;
 
   padding: 1rem 2rem;
 
