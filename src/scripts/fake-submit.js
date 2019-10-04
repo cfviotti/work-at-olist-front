@@ -1,6 +1,7 @@
- signupFormElement = document.querySelector('.js-signupForm')
- signupSubmitElement= document.querySelector('.js-signupSubmit')
- submitLoaderElement= document.querySelector('.js-submitLoader')
+const signupFormElement = document.querySelector('.js-signupForm')
+const signupSubmitElement = document.querySelector('.js-signupSubmit')
+const submitLoaderElement = document.querySelector('.js-submitLoader')
+const signupSuccessElement = document.querySelector('.js-signupSuccess')
 
 
 // signupFormElement.addEventListener('submit', function(signupForm) {
@@ -11,10 +12,15 @@
 signupFormElement.addEventListener('submit', function(e) {
   e.preventDefault()
   showLoader()
-  setTimeout(() => signupFormElement.submit(), 4000);
+  setTimeout(() => formSuccessfulSend(), 4000);
 })
 
 let showLoader = () => {
   submitLoaderElement.classList.add('-show')
   signupSubmitElement.classList.add('-hidelabel')
+}
+
+let formSuccessfulSend = () => {
+  signupSuccessElement.classList.add('-show')
+  signupFormElement.remove()
 }
