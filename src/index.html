@@ -42,7 +42,8 @@
         
         <div class="form-field">
           <label for="Email">E-mail</label>
-          <input type="email" id="Email" name="email" required>
+          <!-- Not using a custom pattern as HTML5 email validation has already an extensive regex matching embeded -->
+          <input class="js-emailInput" type="email" id="Email" name="email" required> 
         </div>
         
         <div class="form-field">
