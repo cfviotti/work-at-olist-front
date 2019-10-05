@@ -14,7 +14,7 @@ const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 const OfflinePlugin = require('offline-plugin');
 
 module.exports = merge(common, {
-  mode: 'production',
+  mode: process.env.NODE_ENV,
   devtool: 'source-map',
   module: {
     rules: [
@@ -45,9 +45,6 @@ module.exports = merge(common, {
               sourceMap: true,
               config: {
                 path: __dirname + '/postcss.config.js',
-                ctx: {
-                  env: 'production'
-                }
               }
             }
           },
@@ -95,10 +92,21 @@ module.exports = merge(common, {
         })
       ]
     }),
+    new FaviconsWebpackPlugin({
+      logo: './src/images/favicon.svg',
+      cache: true,
+      icons: {
+        twitter: true,
+        windows: true
+      },
+      prefix: 'favicons',
+      outputPath: 'images/favicons',
+      publicPath: 'images/'
+    }),
     new OfflinePlugin()
   ],
   output: {
     filename: '[name].[contentHash].js',
-    path: path.resolve(__dirname, 'dist')
+    path: path.resolve(__dirname, 'dist'),
   }
 });
